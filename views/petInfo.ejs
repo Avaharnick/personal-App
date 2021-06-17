@@ -1,0 +1,23 @@
+<%- include('bootheader') -%>
+
+
+
+    <div class="jumbotron">
+        <h1>Pet information</h1>
+        <p> Enter information about your pet</p>
+    </div>
+    <form method="post" action="/showPetInfo">
+        Enter the pet's name <input type="text" name="fullName"> <br>
+        Enter a picture the pet <input type="text" name="picture" size="60"> <br>
+        Enter the age of the pet <input type="number" name="age" > <br>
+
+
+        What are the pet's skills:<br>
+           paw <input type="checkbox" name="skills" value="jump"><br>
+           roll over  <input type="checkbox" name="skills" value="roll over"><br>
+           sit <input type="checkbox" name="skills" value="sit"><br>
+           <input type="submit" value="submit">
+    </form>
+
+
+<%- include('bootfooter') -%>
