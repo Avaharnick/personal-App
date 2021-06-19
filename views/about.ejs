@@ -1,123 +1,55 @@
 <%- include('bootheader') -%>
-
 <%- include('menubar') -%>
 
+    <div class="jumbotron">
+        <h1>Ava Harnick</h1>
+        <p>Bio and Fact sheet</p>
+    </div>
 
 
-<div class="jumbotron">
 
-         <h1>Quiz 1 Makeup<h1/>
 
- </div>
 
- <p> Write the HTML for this page including the includes for the bootheader and bootfooter,and all of the explanatory text too! </p>
+<div class="row">
 
+  <div class="col bg-warning text-danger">
+    <p>
+      I am a rising senior at Brandeis University majoring in Business and computer science.
+      At Brandeis I am on Banshee, the womens ulitmate frisbee team.
+    </p>
+    <p>
+      I grew in New York city.
+    </p>
 
+    <div class="bg-danger text-white">
+      <h2>
+        Fun facts about me
+      </h2>
+      <ul>
+        <li> I can stand on my head</li>
+        <li> I played ice hockey growing up</li>
+        <li> I love sushi</li>
+      </ul>
+    </div>
 
- <div class="container">
 
-        <div class="row">
+  <div class="col">
+    Picture of me:
+  </div>
 
-                <div class="col-sm bg-primary">
+  <div class="col">
+    <img src="data:image/jpeg;base64,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"
+     width="50%" alt="photo of Ava Harnick" >
+  </div>
 
-                    This is the first column of the first row. <br>
+</div>
 
-                    It has a link to the  <a href="https://www.brandeis.edu/computer-science/" >
 
-                    computer science webpage</a> whose address is https://www.brandeis.edu/computer-
 
-                    science.<br>
-
-                    The colors of the columns are either bg-primary or bg-danger
-
-                  </div>
-
-                   <div class="col bg-danger">
-
-                      Column 2 has a picture of a cat with width 200
-
-                       <img width="200"  src="images/cat.jpg">
-
-                       There are five columns in this<br> row
-
-                  </div>
-
-                  <div class="col bg-primary">
-
-                     This is dog.jpg
-
-                      <img width="200"  src="images/dog.jpg">
-
-                 </div>
-
-                 <div class="col bg-danger">
-
-                     cat.jpg
-
-                     <img width="200"  src="images/cat.jpg">
-
-                </div>
-
-                <div class="col bg-primary">
-
-                     dog.jpg
-
-                    <img width="200"  src="images/dog.jpg"
-
-               </div>
-
-
-
-            </div>
-
-            <div class="row">
-
-               <div class="col bg-info">
-
-                  <p>  This is the second row and it has two columns.The first column has this text and the<br>
-
-                    background color is bg-info The second column has a table with the background color bg-           <br>warning </p>
-
-                </div>
-
-                <div class="col bg-warning">
-
-                      Don't forget the thead or tbody in this table! <br> Observe that this table is bordered and striped.
-
-                  <table class="table table-bordered table-striped">
-
-                    <thead>
-
-                          <tr><th> ONE </th> <th> TWO </th> <th> THREE </th><th> FOUR </th></tr>
-
-                    </thead>
-
-                     <tbody>
-
-                           <tr><td> 1 </td> <td> 2 </td><td> 3 </td><td> 4 </td> </tr>
-
-                           <tr><td> uno </td> <td> dos </td><td> tres </td><td> quatro </td> </tr>
-
-                           <tr><td> ichi </td> <td> ni </td><td> san </td><td> shi </td> </tr>
-
-                           <tr><td> 1 </td> <td> 10 </td><td> 11 </td><td> 100 </td> </tr>
-
-                      </tbody>
-
-                 </table>
-
-                 </div>
-
-
-
-                </div>
-
-             </div>
-
-
-
-
-
-
+ <!--
+  also add a list and some links
+  to your bio,
+  and maybe a table ...
+-->
 
 <%- include('bootfooter') -%>
