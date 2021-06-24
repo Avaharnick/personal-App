@@ -1,18 +1,18 @@
 <%- include('bootheader') -%>
 <%- include('menubar') -%>
 <div class="jumbotron">
-    <h1>Company finder </h1>
-    <p> Hi welcome to the company search page. Here you will find information about a company and you can decide
-      if you are interested an investing.
+    <h1>Pet finder </h1>
+    <p> Hi well to pet finder. Here you will see multiple dog and you can choose
+      which onces you would like to get.
    </p>
 </div>
 
 
-<h2>Here is a list of comapnies that are looking for investors</h2>
+<h2>Here is a list of dog breed we have</h2>
 <ul>
-    <li><a href="https://www.facebook.com/">Facebook</a></li>
-    <li><a href="https://www.linkedin.com/">Linkdin</a></li>
-    <li><a href="https://www.uber.com/">Uber</a></li>
+    <li><a href="https://www.akc.org/dog-breeds/poodle-standard/">Poodle</a></li>
+    <li><a href="https://www.akc.org/dog-breeds/golden-retriever/">Golden retriever</a></li>
+    <li><a href="https://www.akc.org/dog-breeds/bulldog/">Bull dogs</a></li>
 </ul>
 
 
@@ -20,55 +20,24 @@
 <div class="container">
       <div class="row">
               <div class="col">
-                 <p> Here is a table that illistrates how much each company is looking for from investors and
-                   what their stock is valued at.</p>
+                 <p> Here is a table that illistrates how much each dog breed on average weighs and if they shed or not.</p>
                  <br>
                  <table class="table table-bordered table-striped">
                   <thead>
-                   <tr><th>Company name</th><th>Investment goal</th><th>Stock price</th></tr>
+                   <tr><th>Breed name</th><th>Weight</th><th>Does it shed</th></tr>
                    </thead>
                    <tbody>
-                     <tr><td>Facebook</td><td>two million</td><td>330.35</td></tr>
-                     <tr><td>Linkdin</td><td>three million</td><td>1430.25</td></tr>
-                     <tr><td>Uber</td><td>one million</td><td>50.18</td></tr>
+                     <tr><td>Labrador retriever</td><td>75 pounds</td><td>Yes</td></tr>
+                     <tr><td>Basset hound</td><td>25 pounds</td><td>No</td></tr>
+                     <tr><td>Huskie</td><td>50 pounds<td>Yes</td></tr>
                    </tbody>
                  </table>
                 </div>
-                 <div class="col">
-                     <br>
-                     <img src="https://media.istockphoto.com/photos/money-savings-investment-making-money-for-future-financial-wealth-picture-id1130326185?k=6&m=1130326185&s=612x612&w=0&h=qEV-8ENTs7ePbQOf-A-5JLsAQ_LGfkt3ZUEfR_4EeNg="
-                      width="30%" alt="Investment photo" >
-                </div>
+
           </div>
 
 
-<form method="post" action="/showformdata" class="bg-info">
-  Enter your name:
-  <input type="text"
-         name="fullname"
-         placeholder="your full name"><br>
 
-  How much are you looking to invest?
-  <select name="Investment amount">
-    <option>Under 500,000</option>
-    <option>500,000-1,000,000</option>
-    <option>1,000,000-2,000,000</option>
-    <option>Over 2,000,000</option>
-  </select>
-<br>
-  have you found a company you want to invest in yet?<br>
-  yes <input type="radio" name="Foundcompany" value="yes"><br>
-  no  <input type="radio" name="Foundcompany" value="no"><br>
-
-
- What type of company do you want to invest in:<br>
-  Tech compnay <input type="checkbox" name="interest" value="Tech"><br>
-  Finace company <input type="checkbox" name="interest" value="Finace"><br>
-  Healthcare Company <input type="checkbox" name="interest" value="Healthcare"><br>
-  <hr>
-
-  <input type="submit" value="Register now">
-</form>
 
 
 

@@ -1,0 +1,37 @@
+<%- include('bootheader') -%>
+
+<%- include('menubar') -%>
+
+
+
+
+
+          <form method="post" action="/dog">
+              new dog's name: <input type="text" name="name"><br>
+              new dog's age: <input type="number" name="age"><br>
+              <input type="submit" value="add dog">
+          </form>
+
+          
+            <div class="jumbotron">
+                <h1>Dogs we have</h1>
+                <p> This is a list of the different dogs we have.
+                 </p>
+            </div>
+
+            <ul>
+                  <% dogInfo.forEach(dog => { %>
+                      <li>
+
+                              Dog's name:  <%= dog.name %>
+                              Dog's age:  <%= dog.age%>
+
+
+                            <br>
+                           <%= dog.createdAt %>
+                      </li>
+                  <% }) %>
+                </ul>
+
+
+<%- include('bootfooter') -%>

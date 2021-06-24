@@ -15,6 +15,18 @@ var debug = require("debug")("personalapp:server");
 // Now we create the server
 const app = express();
 
+const mongoose = require( 'mongoose' );
+//mongoose.connect( `mongodb+srv://${auth.atlasAuth.username}:${auth.atlasAuth.password}@cluster0-yjamu.mongodb.net/authdemo?retryWrites=true&w=majority`);
+mongoose.connect( 'mongodb://localhost/authDemo');
+//const mongoDB_URI = process.env.MONGODB_URI
+//mongoose.connect(mongoDB_URI)
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("we are connected!!!")
+});
+
 // Here we specify that we will be using EJS as our view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -23,6 +35,9 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+const dogDataRouter = require('./routes/dogData');
+
 
 // Here we specify that static files will be in the public folder
 app.use(express.static(path.join(__dirname, "public")));
@@ -47,11 +62,14 @@ app.use(function(req, res, next) {
   next();
 });
 
+
+
 // here we start handling routes
 app.get("/", (req, res) => {
   res.render("index");
 });
-
+app.use('/dog' ,dogDataRouter);
+//app.get('/dog',(req,res)=>{res.send("ok")})
 app.get("/demo",
         function (req, res){res.render("demo");});
 

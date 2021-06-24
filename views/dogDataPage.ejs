@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h1> Dog list </h1>
+  <p> Here is the list of dogs we have </p>
+  <div class="jumbotron">
+      <h1>Dogs we have</h1>
+      <p> This is a list of the different dogs we have.
+       </p>
+  </div>
+
+  <ul>
+        <% dogInfo.forEach(dog => { %>
+            <li>
+                  <a href="/dog/<%= dog._id %>">
+                    Dog's name:  <%= dog.name %>
+                    Dog's age:  <%= dog.age%>
+                  </a>
+
+                  <br>
+                 <%= dog.createdAt %>
+            </li>
+        <% }) %>
+      </ul>
